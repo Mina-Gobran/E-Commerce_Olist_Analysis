@@ -1834,47 +1834,6 @@ DIVIDE(
 - Stakeholder expectation management
 
 ---
-
-## Project Repository Structure
-```
-olist-ecommerce-analysis/
-│
-├── data/
-│   ├── raw/                          # Original CSV files from Kaggle
-│   └── processed/                    # Cleaned and transformed datasets
-│
-├── sql/
-│   ├── Create_Database.sql           # Schema creation script
-│   ├── Data_cleaning.sql             # Data quality and transformation
-│   ├── Power_BI_optimization.sql     # Fact table and dimension creation
-│   ├── 1.sales_performance_analysis.sql
-│   ├── 2.customers_base_and_churn.sql
-│   ├── 3.delivery_and_logistics_analysis.sql
-│   ├── 4.products_analysis_and_growth.sql
-│   ├── 5.payment_analysis.sql
-│   └── 6.sellers_performance_analysis.sql
-│
-├── powerbi/
-│   ├── Olist_Dashboard.pbix          # Power BI dashboard file
-│   └── DAX_Measures.txt              # Collection of DAX formulas
-│
-├── images/
-│   ├── dashboard_overview.gif
-│   ├── sales_products_dashboard.gif
-│   ├── customer_analytics.png
-│   ├── delivery_dashboard.gif
-│   ├── payment_preferences.png
-│   └── sellers_dashboard.gif
-│
-├── documentation/
-│   ├── data_dictionary.md            # Field definitions and descriptions
-│   ├── business_glossary.md          # Business term definitions
-│   └── technical_specifications.md   # Implementation details
-│
-└── README.md                          # This file
-```
-
----
 ## Contact Information
 
 **Project Author:** [Mina Gobran]
