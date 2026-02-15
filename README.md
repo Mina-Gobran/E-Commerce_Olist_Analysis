@@ -1830,7 +1830,6 @@ Follow dashboard specifications outlined in each analysis module:
 - Develop 6 analysis pages (Sales, Customer, Delivery, Product, Payment, Seller)
 - Apply consistent formatting and color schemes
 - Implement interactive filters and slicers
-- Add drill-through functionality for detailed analysis
 
 **Step 5: Performance Optimization**
 1. Reduce visual count per page (maximum 8-10 visuals)
@@ -1858,7 +1857,7 @@ Follow dashboard specifications outlined in each analysis module:
 **Recommended Practices:**
 1. Maintain SQL scripts in Git repository
 2. Document all data transformations and business logic
-3. Version Power BI reports (use OneDrive/SharePoint version history)
+3. Version Power BI reports
 4. Keep change log of dashboard modifications
 5. Document data source connection strings and credentials (securely)
 6. Create data dictionary for business users
