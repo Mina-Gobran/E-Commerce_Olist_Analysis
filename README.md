@@ -191,6 +191,9 @@ ALTER TABLE dim_date ADD PRIMARY KEY (date);
 
 ## 1. Sales & Product Analysis
 ![alt text](images/Sales_products_dashboard.gif)
+
+**Find SQL code file**: [Here](sql_files/1.Sales_performance_analysis.sql)
+
 ### Dashboard Overview
 
 **Purpose:** Comprehensive view of revenue performance and product portfolio optimization to identify top performers and growth opportunities.
@@ -421,6 +424,9 @@ ORDER BY
 
 ## 2. Customer Retention & Behavior
 ![alt text](images/customer_analytics.png)
+
+**Find SQL code file**: [Here](sql_files/2.Customers_base_and_churn.sql)
+
 ### Dashboard Overview
 
 **Purpose:** Analyzes customer loyalty patterns, lifetime value distribution, and churn risk segmentation to develop effective retention strategies.
@@ -589,6 +595,9 @@ The extremely high churn rate (71.49%) and low repeat purchase rate (3%) represe
 
 ## 3. Delivery & Logistics Performance
 ![alt text](images/delivery_dashboard.gif)
+
+**Find SQL code file**: [Here](sql_files/3.Delivery_effect_and_logistics.sql)
+
 ### Dashboard Overview
 
 **Purpose:** Detailed analysis of fulfillment operations, delivery timing accuracy, and the quantifiable impact of logistics performance on customer satisfaction.
@@ -746,6 +755,9 @@ ORDER BY
 ---
 ## 4. Payment Methods & Preferences
 ![alt text](images/payment_preferences.png)
+
+**Find SQL code file**: [Here](sql_files/5.Payment_analysis.sql)
+
 ### Dashboard Overview
 
 **Purpose:** Analyzes customer payment behaviors, preferences, and their correlation with order completion rates to optimize checkout experience and reduce friction.
@@ -941,6 +953,9 @@ ORDER BY
 ---
 ## 5. Seller Performance
 ![alt text](images/seller_dashboard.gif)
+
+**Find SQL code file**: [Here](sql_files/6.Seller_performance_analysis.sql)
+
 ### Dashboard Overview
 
 **Purpose:** Comprehensive analysis of the seller ecosystem including geographic distribution, revenue performance, quality metrics, and delivery capabilities to optimize marketplace health.
@@ -1676,105 +1691,6 @@ Other Brazilian regions show customer demand but have insufficient seller and lo
 - Dataset includes 9 CSV files with transactional and dimensional data
 - Time period: September 2016 - October 2018
 
-### Database Setup Process
-
-**Step 1: PostgreSQL Database Creation**
-```bash
-# Access PostgreSQL command line
-psql -U postgres
-
-# Create new database
-CREATE DATABASE olist_ecommerce;
-
-# Connect to the database
-\c olist_ecommerce
-
-# Verify connection
-SELECT current_database();
-```
-
-**Step 2: Schema Creation**
-```bash
-# Execute schema creation script
-\i sql/Create_Database.sql
-
-# Verify table creation
-\dt
-
-# Check table structures
-\d orders
-\d customers
-\d products
-```
-
-**Step 3: Data Import**
-Import CSV files into corresponding tables using COPY command or pgAdmin import tool:
-```sql
-COPY customers FROM '/path/to/olist_customers_dataset.csv' 
-DELIMITER ',' CSV HEADER;
-
-COPY geolocation FROM '/path/to/olist_geolocation_dataset.csv' 
-DELIMITER ',' CSV HEADER;
-
-COPY orders FROM '/path/to/olist_orders_dataset.csv' 
-DELIMITER ',' CSV HEADER;
-
--- Repeat for all tables
-```
-
-**Step 4: Data Cleaning Execution**
-```bash
-# Run data cleaning script
-\i sql/Data_cleaning.sql
-
-# Verify data quality
-SELECT COUNT(*) FROM geolocation; -- Should show reduced count after deduplication
-SELECT COUNT(*) FROM orders WHERE delivery_delay_days IS NOT NULL; -- Verify calculated columns
-```
-
-**Step 5: Power BI Optimization**
-```bash
-# Create fact tables and dimensional models
-\i sql/Power_BI_optimization.sql
-
-# Verify fact table creation
-SELECT COUNT(*) FROM fact_orders;
-SELECT * FROM dim_date LIMIT 10;
-```
-
-### Analysis Query Execution
-
-Execute analysis modules sequentially:
-
-**Sales Performance Analysis:**
-```bash
-\i sql/1_sales_performance_analysis.sql
-```
-
-**Customer Retention Analysis:**
-```bash
-\i sql/2_customers_sales_and_churn.sql
-```
-
-**Delivery Performance Analysis:**
-```bash
-\i sql/3_delivery_and_logistics_analysis.sql
-```
-
-**Product Analysis:**
-```bash
-\i sql/4_products_analysis.sql
-```
-
-**Payment Analysis:**
-```bash
-\i sql/5_payment_analysis.sql
-```
-
-**Seller Performance Analysis:**
-```bash
-\i sql/6_sellers_analysis.sql
-```
 ### Power BI Dashboard Development
 
 **Step 1: Data Connection**
@@ -1824,45 +1740,6 @@ DIVIDE(
 ### Views of created calulated columns via DAX
 ![alt text](images/DAX_column_1.png)
 ![alt text](images/DAX_column_2.png)
-**Step 4: Dashboard Development**
-Follow dashboard specifications outlined in each analysis module:
-- Create home page with navigation buttons
-- Develop 6 analysis pages (Sales, Customer, Delivery, Product, Payment, Seller)
-- Apply consistent formatting and color schemes
-- Implement interactive filters and slicers
-
-**Step 5: Performance Optimization**
-1. Reduce visual count per page (maximum 8-10 visuals)
-2. Use aggregated tables where possible
-3. Implement DirectQuery only if necessary (Import mode preferred)
-4. Remove unused columns and tables from model
-5. Optimize DAX measures for performance
-6. Test dashboard load times and responsiveness
-
-### Data Refresh Strategy
-
-**Scheduled Refresh Configuration:**
-1. Publish dashboard to Power BI Service
-2. Configure gateway for on-premises PostgreSQL connection
-3. Set refresh schedule (daily, weekly, or as needed)
-4. Monitor refresh success and failure logs
-5. Optimize refresh times based on data volume
-
-**Manual Refresh:**
-- Power BI Desktop: Home → Refresh
-- Power BI Service: Dataset settings → Refresh now
-
-### Version Control and Documentation
-
-**Recommended Practices:**
-1. Maintain SQL scripts in Git repository
-2. Document all data transformations and business logic
-3. Version Power BI reports
-4. Keep change log of dashboard modifications
-5. Document data source connection strings and credentials (securely)
-6. Create data dictionary for business users
-
----
 
 ## Skills Demonstrated
 
@@ -2004,23 +1881,3 @@ olist-ecommerce-analysis/
 **Email:** [Minamaher009@gmail.com]
 **LinkedIn:** [[Your LinkedIn Profile](https://www.linkedin.com/in/mina-gobran-02793029b/)]
 **GitHub:** [[Your GitHub Profile](https://github.com/)]
-
----
-
-## Acknowledgments
-
-- Dataset provided by Olist and made available on Kaggle
-- Brazilian e-commerce market insights from industry research
-- SQL and Power BI community resources for best practices
-
----
-
-## License
-
-This project is available under the MIT License. Dataset usage subject to Kaggle and Olist terms of service.
-
----
-
-**Last Updated:** [Current Date]
-**Version:** 1.0
-**Status:** Complete and ready for deployment
