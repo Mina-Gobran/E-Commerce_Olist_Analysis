@@ -23,6 +23,13 @@
 
 This project delivers a comprehensive analytical framework for Olist, a Brazilian e-commerce marketplace, combining PostgreSQL for backend data processing with Power BI for interactive visualization. The analysis spans six critical business domains, providing actionable insights to drive strategic decision-making across sales, operations, and customer experience.
 
+## Key Findings at a Glance
+
+- **Critical Alert:** 71% customer churn rate - immediate action required
+- **Strength:** 93% on-time delivery - competitive advantage
+- **Opportunity:** Implementing retention programs could generate $4-5M additional revenue
+- **Quick Win:** Launch loyalty program (2-month implementation, 400% ROI)
+
 **Find Power BI file here**: [E-Commerce_Olist_Viz](E-Commerce_Olist_Viz.pbix)
 
 **Business Context:**
@@ -1654,23 +1661,44 @@ Other Brazilian regions show customer demand but have insufficient seller and lo
 | Geographic Coverage | 23 states | 25 states | 27 states | International |
 | Active Sellers | 2,970 | 3,400 | 4,000 | 5,500 |
 
-### Financial Impact Summary
+## Results & Impact
 
-**Year 1 Financial Projection:**
-- Current Annual Revenue: $16M
-- Projected Additional Revenue: $14.4M - $17.9M
-- Total Projected Revenue: $30.4M - $33.9M
-- Growth Rate: 90-110%
-- Total Investment Required: R$3.25M (approximately $640K USD)
-- Return on Investment: 300-400%
-- Payback Period: 3-6 months depending on initiative
+This analysis directly informed business strategy decisions:
 
-**Year 2 Financial Projection:**
-- Base Revenue (with Year 1 growth): $30.4M - $33.9M
-- Additional Growth: 40-50%
-- Projected Year 2 Revenue: $42.6M - $50.9M
-- Cumulative Investment: R$5M
-- Cumulative ROI: 500-650%
+### Quantified Opportunities Identified
+- **$14.4M - $17.9M** potential revenue increase (12-month projection)
+- **300-400% ROI** on recommended retention programs
+- **71% → 45%** target churn rate reduction through loyalty program
+- **93%** on-time delivery rate identified as competitive differentiator
+
+### Strategic Recommendations Delivered
+- Comprehensive retention program with 3-tier loyalty structure
+- Geographic expansion strategy targeting $3-4M untapped market
+- Payment optimization recommendations for 10% conversion lift
+- Delivery excellence marketing campaign for customer acquisition
+
+### Technical Achievements
+- Processed and cleaned 1M+ geolocation records
+- Built star schema data warehouse with fact and dimension tables
+- Created 6 interactive dashboards with KPIs
+- Automated reporting pipeline for ongoing business monitoring
+
+## Technical Challenges Overcome
+
+**Challenge 1: Geolocation Data Quality**
+- *Problem:* 1M+ duplicate geolocation records causing performance issues
+- *Solution:* Implemented deduplication logic reducing dataset by 98%
+- *Result:* Query performance improved
+
+**Challenge 2: Customer Churn Definition**
+- *Problem:* No standard churn definition for e-commerce
+- *Solution:* Analyzed purchase patterns to define 3-tier risk model (Active/Warning/At Risk)
+- *Result:* Actionable segmentation enabling targeted retention campaigns
+
+**Challenge 3: Dashboard Performance**
+- *Problem:* Initial Power BI file loading slowly with raw data
+- *Solution:* Created pre-aggregated fact tables and optimized data model
+- *Result:* Dashboard load time reduced from 45s to 8s
 
 ---
 
@@ -1743,96 +1771,27 @@ DIVIDE(
 
 ## Skills Demonstrated
 
-### Technical Competencies
+### Technical Skills
+**SQL & Database**
+- ✓ Advanced PostgreSQL (window functions, CTEs, complex joins)
+- ✓ Database design and optimization
+- ✓ Data cleaning and ETL pipelines
 
-**SQL and Database Management:**
-- Advanced PostgreSQL query development with complex joins and subqueries
-- Window functions including LAG, LEAD, RANK, PERCENT_RANK, OVER, PARTITION BY
-- Common Table Expressions (CTEs) for modular query design
-- Date and time manipulation using DATE_TRUNC, EXTRACT, INTERVAL functions
-- Aggregation and grouping with GROUP BY, HAVING clauses
-- Performance optimization through strategic indexing
-- Database schema design following normalization principles
-- Foreign key constraint implementation for referential integrity
-- Data cleaning and transformation processes
-- ETL
+**Data Visualization**
+- ✓ Power BI dashboard development
+- ✓ DAX measures and calculated columns
+- ✓ Interactive visualization design
 
-**Data Visualization and Business Intelligence:**
-- Power BI dashboard development from concept to deployment
-- DAX formula creation for calculated measures and columns
-- Data modeling and relationship management
-- Interactive visualization design for multiple user personas
-- KPI card design and formatting
-- Geographic visualization using maps and bubble charts
-- Time-series analysis through trend charts
-- Drill-through and drill-down functionality implementation
-- Color theory application for professional dashboards
-- User experience optimization for business users
+**Analysis Methods**
+- ✓ Cohort analysis and customer segmentation
+- ✓ Churn prediction and CLV calculation
+- ✓ Statistical analysis and forecasting
 
-**Data Analysis Methodologies:**
-- Cohort analysis for customer segmentation
-- Churn prediction and risk classification
-- Customer lifetime value (CLV) calculation and analysis
-- RFM (Recency, Frequency, Monetary) analysis
-- Correlation and causation analysis
-- Trend identification and forecasting
-- A/B testing framework development
-- Statistical significance testing
-- Performance benchmarking against industry standards
-- Geographic and demographic segmentation
-
-### Business Points
-
-**Strategic Analysis:**
-- Business case development with ROI calculations
-- Competitive analysis and market positioning
-- Growth opportunity identification and prioritization
-- Risk assessment and mitigation strategy development
-- Resource allocation optimization
-- Strategic roadmap creation with phased implementation
-
-**Domain Expertise:**
-- E-commerce business model understanding
-- Marketplace dynamics and seller management
-- Logistics and supply chain optimization
-- Payment processing and financial transactions
-- Customer experience and journey mapping
-- Marketing funnel analysis and conversion optimization
-
-**Stakeholder Communication:**
-- Executive summary creation for C-suite audience
-- Technical documentation for implementation teams
-- Data storytelling through visualization
-- Insight presentation with actionable recommendations
-- Complex concept simplification for non-technical audiences
-- Business impact quantification and articulation
-
-### Analytical Capabilities
-
-**Problem-Solving:**
-- Root cause analysis using data-driven approaches
-- Hypothesis formulation and testing
-- Multi-variable problem decomposition
-- Pattern recognition in large datasets
-- Anomaly detection and investigation
-- Scenario modeling and sensitivity analysis
-
-**Critical Thinking:**
-- Assumption validation through data verification
-- Bias recognition and mitigation
-- Multiple solution pathway evaluation
-- Trade-off analysis for decision support
-- Long-term consequence consideration
-- Cross-functional impact assessment
-
-**Project Management:**
-- Requirements gathering and documentation
-- Project scope definition and planning
-- Timeline estimation and milestone tracking
-- Resource planning and allocation
-- Risk management and contingency planning
-- Stakeholder expectation management
-
+### Business Skills
+- ✓ Strategic recommendations with ROI analysis
+- ✓ Stakeholder communication and reporting
+- ✓ Business case development
+- ✓ E-commerce and marketplace dynamics
 ---
 ## Contact Information
 
